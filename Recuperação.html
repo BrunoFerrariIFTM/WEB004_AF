@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>
+			Cadastro de Clientes
+		</title>
+		<script src="bootstrap.bundle.js"></script>
+		<script src="bootstrap.bundle.min.js"></script>
+		<link rel="stylesheet" href="bootstrap.css">
+	</head>
+	<body>
+	<nav class="navbar navbar-light" style="background-color: #E0FFFF;">
+		<div class="container-sm">
+			<h1>
+			 Cadastro de Clientes
+			</h1>
+		</div>
+		</nav>
+		<div class="container">
+			<form class="row">
+				<div>
+				<h4>&nbsp&nbspSelecione se você deseja se cadastrar como pessoa Física ou Pessoa Jurídica:</h4>
+				</div>
+				
+				<div>
+				<select id="select" onchange="escolha()" style="margin-top: 1px;">
+					<option value=""></option>
+					<option value="CPF">Física</option>
+					<option value="CNPJ">Jurídica</option>
+				</select>
+				</div>
+			</form>
+			<br/>
+			
+			<form class="row">	
+			
+				<div>
+					<label name="nome">&nbsp&nbsp Nome:</label>
+				</div>
+				<div class="col-3">
+				<input name="nome" type="text" class="form-control" style="margin-top: -7px;"></input>
+				</div>
+			
+				<div class="col-1,5" >
+				<p size="5" id="retorno">Digite seu:</p>
+				
+				<script>
+				function escolha() 
+				{
+				var x = document.getElementById("select").value;
+				document.getElementById("retorno").innerHTML =  "Digite seu " + x;
+				}
+				</script>
+				</div>
+				
+				<div class="col-3">
+				<label></label>
+				<input name="numero" type="text" class="form-control" style="margin-top: -30px;"></input>
+				</div>
+				
+				<div class="col-2">
+				<button type="submit" class="btn btn-outline-success" style="margin-top: -7px;">Salvar Informações</button>
+				</div>
+			</form>
+			<br/><br/>
+			<table border="0" class="table table-hover">
+				<colgroup>
+					<col width="100">
+					<col width="175">
+					<col width="250">
+					<col width="100">
+					<col width="100">
+				</colgroup>
+				<thead>
+					<tr>
+						<th>CPF/CNPJ</th>
+						<th>Nome:</th>
+						<th>Número</th>
+						<th align="right"></th>
+						<th align="right"></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>CPF</td>
+						<td>Amilton José Pereira da Silva</td>
+						<td>153.255.147-15</td>
+						<td><button type="button" class="btn btn-outline-warning">Editar</button></td>
+						<td><button type="button" class="btn btn-outline-danger">Excluir</button></td>
+					</tr>
+					
+					<tr>
+						<td>CPF</td>
+						<td>José Bastos Dias</td>
+						<td>088.145.189-16</td>
+						<td><button type="button" class="btn btn-outline-warning">Editar</button></td>
+						<td><button type="button" class="btn btn-outline-danger">Excluir</button></td>
+					</tr>
+					
+					<tr>
+						<td>CNPJ</td>
+						<td>Cornélio Santos Neves</td>
+						<td>16.162.255/8471</td>
+						<td><button type="button" class="btn btn-outline-warning">Editar</button></td>
+						<td><button type="button" class="btn btn-outline-danger">Excluir</button></td>
+					</tr>
+					
+					<tr>
+						<td>CPF</td>
+						<td>Thomas Shelby da Cunha</td>
+						<td>188.642.777-66</td>
+						<td><button type="button" class="btn btn-outline-warning">Editar</button></td>
+						<td><button type="button" class="btn btn-outline-danger">Excluir</button></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</body>
+</html>
